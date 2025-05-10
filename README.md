@@ -1,1 +1,1 @@
-The 3nd project of Advanced Programming class
+The 3rd project of Advanced Programming class

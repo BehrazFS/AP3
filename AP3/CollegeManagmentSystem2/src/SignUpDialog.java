@@ -65,6 +65,7 @@ public class SignUpDialog extends JDialog implements ActionListener{
 		}
 		catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 		
 	}
@@ -97,11 +98,13 @@ public class SignUpDialog extends JDialog implements ActionListener{
 					}
 					catch (Exception ee) {
 						// TODO: handle exception
+						System.out.println(ee.getMessage());
 					}
 				}
 			}
 		}catch (Exception ex) {
 			// TODO: handle exception
+			System.out.println(ex.getMessage());
 		}
 	}
 

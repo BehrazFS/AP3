@@ -32,10 +32,14 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 		try {
 			File file = new File("CMS2.db");
 			if(!file.exists()) {
+
 				SQLight_DataBase.createSQL();
+
 			}
 			else {
+
 				SQLight_DataBase.construct();
+
 			}
 			
 			try {
@@ -43,6 +47,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 			}
 			catch (Exception e) {
 				// TODO: handle exception
+				System.out.println(e.getMessage());
 			}
 			
 			//mainPanel
@@ -147,6 +152,8 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
+			System.out.println(e.getLocalizedMessage());
 		}
 	}
 	public static void setErrorMessege(String msg , Color color) {
@@ -156,6 +163,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 	}
 	public static void addToUniversityList(University uni) {
@@ -172,6 +180,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 					SQLight_DataBase.addUniversity(uni.getName());
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
+					System.out.println(e.getMessage());
 					
 				}
 			}
@@ -186,6 +195,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 	}
 	public static void refreshUniversityList() {
@@ -195,6 +205,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 	}
 	@Override
@@ -278,6 +289,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 			}
 		}
 		catch (Exception ex) {
+			System.out.println(ex.getMessage());
 			// TODO: handle exception
 		}
 	}
@@ -308,6 +320,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 			return SQLight_DataBase.CheckUsername(username);
 		}catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
 			return false;
 		}
 	}
@@ -319,6 +332,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
 			return false;
 		}
 	}
@@ -331,7 +345,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 			JOptionPane.showMessageDialog(null, ("id - name - lastname - username\n"+tempu.getId() + " - " + tempu.getName() + " - " + tempu.getLastname()+ " - " + tempu.getUsername()) , "Teacher", JOptionPane.PLAIN_MESSAGE);
 
 		} catch (Exception e) {
-			
+			System.out.println(e.getMessage());
 		}
 		
 	}
@@ -344,7 +358,7 @@ public class LoginFrame extends JFrame implements MouseListener , Service {
 			JOptionPane.showMessageDialog(null, ("id - name - lastname - username\n"+tempu.getId() + " - " + tempu.getName() + " - " + tempu.getLastname() + " - " + tempu.getUsername()) , "Teacher", JOptionPane.PLAIN_MESSAGE);
 
 		} catch (Exception e) {
-			
+			System.out.println(e.getMessage());
 		}
 	}
 }

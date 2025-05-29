@@ -11,8 +11,10 @@ public class SQLight_DataBase{
 	public static Connection handle;
 	public static void construct() throws ClassNotFoundException,SQLException {
 		// TODO Auto-generated constructor stub
+
 		Class.forName("org.sqlite.JDBC");
 		handle = DriverManager.getConnection("jdbc:sqlite:CMS2.db");
+
 	}
 	public static void createSQL() throws ClassNotFoundException,SQLException {
 		Class.forName("org.sqlite.JDBC");

@@ -15,8 +15,10 @@ Each user type has specific capabilities within the system, ensuring a structure
 *  **Admin Tools**: Admins can oversee the entire system, manage users, and maintain control.
  
 # Pictures
-
-
+![diagram](c1.png)
+![diagram](c2.png)
+![diagram](c3.png)
+![diagram](c4.png)
 
 
 
